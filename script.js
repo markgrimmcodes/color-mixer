@@ -1,10 +1,13 @@
-let main = document.querySelector("main");
+function changeColor() {
+  let redValues = document.getElementById("red").value;
+  let greenValues = document.getElementById("green").value;
+  let blueValues = document.getElementById("blue").value;
+  let rgb = "rgb(" + redValues + "," + greenValues + "," + blueValues + ")";
+  document.body.style.backgroundColor = rgb;
+  document.querySelector("p").innerText =
+    "rgb(" + redValues + "," + greenValues + "," + blueValues + ")";
+}
 
-console.log(main);
-let redValues = red.getAttribute("value");
-let greenValues = green.getAttribute("value");
-let blueValues = blue.getAttribute("value");
-
-let rgb = "rgb(" + redValues + "," + greenValues + "," + blueValues + ")";
-
-console.log(rgb);
+document.querySelector("#red").addEventListener("input", changeColor);
+document.querySelector("#green").addEventListener("input", changeColor);
+document.querySelector("#blue").addEventListener("input", changeColor);
