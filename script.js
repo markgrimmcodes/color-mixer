@@ -22,10 +22,22 @@ rnd.addEventListener("click", () => {
     .then((colorObject) => {
       document.querySelector("p").innerText =
         colorObject.rgb.r + "," + colorObject.rgb.g + "," + colorObject.rgb.b;
-      let = redValues = String(colorObject.rgb.r);
-      let = greenValues = String(colorObject.rgb.g);
-      let = blueValues = String(colorObject.rgb.b);
-      let rgb = "rgb(" + redValues + "," + greenValues + "," + blueValues + ")";
+
+      let = RandomRedValues = String(colorObject.rgb.r);
+      let = RandomGreenValues = String(colorObject.rgb.g);
+      let = RandomBlueValues = String(colorObject.rgb.b);
+
+      document.getElementById("red").value = RandomRedValues;
+      document.getElementById("green").value = RandomGreenValues;
+      document.getElementById("blue").value = RandomBlueValues;
+      let rgb =
+        "rgb(" +
+        RandomRedValues +
+        "," +
+        RandomGreenValues +
+        "," +
+        RandomBlueValues +
+        ")";
       document.body.style.backgroundColor = rgb;
     });
 });
